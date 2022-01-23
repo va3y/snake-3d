@@ -7,7 +7,6 @@ const GameCanvas: React.FC = ({ children }) => {
     <Canvas camera={{ position: [0, 35, 0] }}>
       <ambientLight intensity={2} />
       {children}
-      <gridHelper args={[30, 30]} />
     </Canvas>
   );
 };

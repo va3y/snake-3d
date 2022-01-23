@@ -64,6 +64,7 @@ const StartScreen: React.FC = () => {
         {cameraMode === CameraMode.ThirdPerson && (
           <ThirdPersonCamera firstSnakeBlockRef={firstSnakeBlockRef} direction={direction} />
         )}
+        <gridHelper args={[boardSize + 2, boardSize + 2]} position={[boardSize / 2 - 0.5, -0.5, boardSize / 2 - 0.5]} />
       </GameCanvas>
       {!alive && (
         <Modal titleText="You lost">
