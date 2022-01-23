@@ -57,7 +57,7 @@ export default function useSnake(boardSize: number, level: Level) {
 
     if (gameState.food && isEqualCoordinates(gameState.food, newHead)) {
       gameState.score++;
-      speedRef.current = Math.max(speedRef.current - 100, 300);
+      speedRef.current = Math.max(speedRef.current * 0.8, 100);
       gameState.food = null;
       return gameState;
     }

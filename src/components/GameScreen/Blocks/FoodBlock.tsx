@@ -9,7 +9,7 @@ export default function Model(props: JSX.IntrinsicElements["group"]) {
   return (
     <group ref={group} {...props} scale={0.3}>
       <mesh castShadow receiveShadow geometry={nodes.Cube.geometry}>
-        <meshPhongMaterial attach="material" color="#ffe135" />
+        <meshPhongMaterial attach="material" color="#ff7135" />
       </mesh>
     </group>
   );

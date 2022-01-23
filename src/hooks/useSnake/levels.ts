@@ -14,7 +14,7 @@ export const level2 = (boardSize: number): Level => {
   const middle = Math.floor(boardSize / 2);
   const offset = Math.floor(boardSize * 0.2);
 
-  for (let i = offset; i < boardSize - offset; i++) {
+  for (let i = offset; i <= boardSize - offset; i++) {
     obstacleBlocks.push([i, middle]);
     obstacleBlocks.push([middle, i]);
     addToSnakeMap(levelMap, [i, middle]);
