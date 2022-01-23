@@ -1,18 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.29f67b2d.css",
-    "main.js": "/static/js/main.6492bb9d.js",
-    "static/js/438.9731ef0c.chunk.js": "/static/js/438.9731ef0c.chunk.js",
-    "static/js/872.47ca8044.chunk.js": "/static/js/872.47ca8044.chunk.js",
-    "static/media/Pixeboy_Regular.blob": "/static/media/Pixeboy_Regular.c35aaa20b8b314178c64.blob",
-    "index.html": "/index.html",
-    "main.29f67b2d.css.map": "/static/css/main.29f67b2d.css.map",
-    "main.6492bb9d.js.map": "/static/js/main.6492bb9d.js.map",
-    "438.9731ef0c.chunk.js.map": "/static/js/438.9731ef0c.chunk.js.map",
-    "872.47ca8044.chunk.js.map": "/static/js/872.47ca8044.chunk.js.map"
+    "main.css": "/snake-3d/static/css/main.29f67b2d.css",
+    "main.js": "/snake-3d/static/js/main.aae53c66.js",
+    "static/js/438.9731ef0c.chunk.js": "/snake-3d/static/js/438.9731ef0c.chunk.js",
+    "static/js/872.47ca8044.chunk.js": "/snake-3d/static/js/872.47ca8044.chunk.js",
+    "static/media/Pixeboy_Regular.blob": "/snake-3d/static/media/Pixeboy_Regular.c35aaa20b8b314178c64.blob",
+    "index.html": "/snake-3d/index.html",
+    "main.29f67b2d.css.map": "/snake-3d/static/css/main.29f67b2d.css.map",
+    "main.aae53c66.js.map": "/snake-3d/static/js/main.aae53c66.js.map",
+    "438.9731ef0c.chunk.js.map": "/snake-3d/static/js/438.9731ef0c.chunk.js.map",
+    "872.47ca8044.chunk.js.map": "/snake-3d/static/js/872.47ca8044.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.29f67b2d.css",
-    "static/js/main.6492bb9d.js"
+    "static/js/main.aae53c66.js"
   ]
 }
