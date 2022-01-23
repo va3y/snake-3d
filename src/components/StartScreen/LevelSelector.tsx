@@ -7,7 +7,7 @@ const LevelSelector = () => {
   const [record] = useLocalStorage(lskeys.records, defaultRecordsState);
 
   return (
-    <div className="max-w-sm grid grid-cols-2 mt-2 mb-8 gap-2 items-center justify-center">
+    <div className="max-w-xs md:max-w-md grid grid-cols-2 mt-2 mb-6 items-center justify-center">
       <LevelOption
         id="level-1"
         name="levelSelect"

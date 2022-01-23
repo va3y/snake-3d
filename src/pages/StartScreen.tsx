@@ -13,7 +13,7 @@ const StartScreen: React.FC = () => {
   const navigate = useNavigate();
 
   return (
-    <div className="max-w-md mx-auto flex flex-col pb-10 text-3xl">
+    <div className="max-w-xs md:max-w-lg overflow-hidden mx-auto flex flex-col pb-10 text-3xl">
       <div className="flex-1 w-full max-h-80">
         <TitleCanvas>
           <Suspense fallback={null}>
@@ -43,8 +43,15 @@ const StartScreen: React.FC = () => {
         }}
         className="flex flex-col items-center"
       >
-        <div className="py-8">Menu</div>
-        <InputRange className="mb-16 max-w-xs" id="boardSize" label="Board size: " min="10" max="30" step="5">
+        <div className="pb-6">Menu</div>
+        <InputRange
+          className="mb-10 md:max-w-md max-w-xs"
+          id="boardSize"
+          label="Board size: "
+          min="10"
+          max="30"
+          step="5"
+        >
           <InputRange.Item>10</InputRange.Item>
           <InputRange.Item>15</InputRange.Item>
           <InputRange.Item>20</InputRange.Item>

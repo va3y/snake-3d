@@ -30,7 +30,7 @@ const LevelOption: React.FC<LevelOptionsProps> = ({
       name={name}
       value={value}
       inputClass="appearance-none"
-      labelClass="peer-checked:bg-blue-100 rounded-xl border-2 border-transparent h-32 transition transition-background flex flex-col items-center justify-center text-base w-full"
+      labelClass="peer-checked:bg-blue-100 rounded-xl border-2 border-transparent h-32 transition transition-background flex flex-col items-center justify-center text-base w-full pl-0"
     >
       <Canvas>
         <Center scale={0.15}>
