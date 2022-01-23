@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/snake-3d/static/css/main.29f67b2d.css",
-    "main.js": "/snake-3d/static/js/main.efa7a89b.js",
+    "main.js": "/snake-3d/static/js/main.46d4b179.js",
     "static/js/438.9731ef0c.chunk.js": "/snake-3d/static/js/438.9731ef0c.chunk.js",
     "static/js/872.47ca8044.chunk.js": "/snake-3d/static/js/872.47ca8044.chunk.js",
     "static/media/Pixeboy_Regular.blob": "/snake-3d/static/media/Pixeboy_Regular.c35aaa20b8b314178c64.blob",
     "index.html": "/snake-3d/index.html",
     "main.29f67b2d.css.map": "/snake-3d/static/css/main.29f67b2d.css.map",
-    "main.efa7a89b.js.map": "/snake-3d/static/js/main.efa7a89b.js.map",
+    "main.46d4b179.js.map": "/snake-3d/static/js/main.46d4b179.js.map",
     "438.9731ef0c.chunk.js.map": "/snake-3d/static/js/438.9731ef0c.chunk.js.map",
     "872.47ca8044.chunk.js.map": "/snake-3d/static/js/872.47ca8044.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.29f67b2d.css",
-    "static/js/main.efa7a89b.js"
+    "static/js/main.46d4b179.js"
   ]
 }
