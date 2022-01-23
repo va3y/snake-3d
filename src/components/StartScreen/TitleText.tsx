@@ -2,9 +2,9 @@ import React, { useMemo, useRef } from "react";
 import { extend, TextGeometryProps, useFrame, useLoader } from "@react-three/fiber";
 import { FontLoader } from "three/examples/jsm/loaders/FontLoader";
 import { TextGeometry } from "three/examples/jsm/geometries/TextGeometry";
-import fontUrl from "../../assets/fonts/Pixeboy_Regular.blob";
+import fontUrl from "assets/fonts/Pixeboy_Regular.blob";
 import { Mesh } from "three";
-import { useTurntable } from "../../hooks/useTurntable";
+import { useTurntable } from "hooks/useTurntable";
 import { useSpring, animated, config } from "@react-spring/three";
 
 extend({ TextGeometry });
