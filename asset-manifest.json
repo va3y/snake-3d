@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/snake-3d/static/css/main.fe940192.css",
-    "main.js": "/snake-3d/static/js/main.437f162c.js",
+    "main.js": "/snake-3d/static/js/main.ad275840.js",
     "static/js/438.9731ef0c.chunk.js": "/snake-3d/static/js/438.9731ef0c.chunk.js",
     "static/js/872.47ca8044.chunk.js": "/snake-3d/static/js/872.47ca8044.chunk.js",
     "static/media/Pixeboy_Regular.blob": "/snake-3d/static/media/Pixeboy_Regular.c35aaa20b8b314178c64.blob",
     "index.html": "/snake-3d/index.html",
     "main.fe940192.css.map": "/snake-3d/static/css/main.fe940192.css.map",
-    "main.437f162c.js.map": "/snake-3d/static/js/main.437f162c.js.map",
+    "main.ad275840.js.map": "/snake-3d/static/js/main.ad275840.js.map",
     "438.9731ef0c.chunk.js.map": "/snake-3d/static/js/438.9731ef0c.chunk.js.map",
     "872.47ca8044.chunk.js.map": "/snake-3d/static/js/872.47ca8044.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fe940192.css",
-    "static/js/main.437f162c.js"
+    "static/js/main.ad275840.js"
   ]
 }
