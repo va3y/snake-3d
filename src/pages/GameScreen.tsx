@@ -30,7 +30,7 @@ const StartScreen: React.FC = () => {
   const level = levelNames[levelName](boardSize);
 
   const { snake, food, changeDirection, alive, reset, direction, score } = useSnake(boardSize, level);
-  useControls(changeDirection);
+  const { swipeHandlers } = useControls(changeDirection, cameraMode, direction);
 
   const [record, setRecord] = useLocalStorage(lskeys.records, defaultRecordsState);
 
@@ -46,26 +46,31 @@ const StartScreen: React.FC = () => {
 
   return (
     <div className="h-screen flex flex-col items-center">
-      <Link to="/" className="text-xl absolute left-5 top-5 z-10">
-        <Button>&lt;- Go back</Button>
-      </Link>
-      <div className="absolute top-20 text-3xl left-5">
+      <div className="absolute left-5 top-5 z-10 flex flex-col text-3xl">
+        <Link to="/" className="text-xl mb-4a">
+          <Button>&lt;- Go back</Button>
+        </Link>
         Current score: {score} <br />
         Best score: {record && record[levelName]}
       </div>
-      <GameCanvas>
-        <Level obstacleBlocks={level.obstacleBlocks} boardSize={boardSize} />
-        {snake.map(([x, y], i) => {
-          if (i === 0) return <SnakeBlock ref={firstSnakeBlockRef} key={`${x}${y}`} position={[x, 0, y]} />;
-          return <SnakeBlock key={`${x}${y}`} position={[x, 0, y]} />;
-        })}
-        {food && <FoodBlock position={[food[0], 0, food[1]]} />}
-        {cameraMode === CameraMode.BirdEye && <BirdEyeCamera boardSize={boardSize} />}
-        {cameraMode === CameraMode.ThirdPerson && (
-          <ThirdPersonCamera firstSnakeBlockRef={firstSnakeBlockRef} direction={direction} />
-        )}
-        <gridHelper args={[boardSize + 2, boardSize + 2]} position={[boardSize / 2 - 0.5, -0.5, boardSize / 2 - 0.5]} />
-      </GameCanvas>
+      <div {...swipeHandlers} className="h-screen w-screen">
+        <GameCanvas>
+          <Level obstacleBlocks={level.obstacleBlocks} boardSize={boardSize} />
+          {snake.map(([x, y], i) => {
+            if (i === 0) return <SnakeBlock ref={firstSnakeBlockRef} key={`${x}${y}`} position={[x, 0, y]} />;
+            return <SnakeBlock key={`${x}${y}`} position={[x, 0, y]} />;
+          })}
+          {food && <FoodBlock position={[food[0], 0, food[1]]} />}
+          {cameraMode === CameraMode.BirdEye && <BirdEyeCamera boardSize={boardSize} />}
+          {cameraMode === CameraMode.ThirdPerson && (
+            <ThirdPersonCamera firstSnakeBlockRef={firstSnakeBlockRef} direction={direction} />
+          )}
+          <gridHelper
+            args={[boardSize + 2, boardSize + 2]}
+            position={[boardSize / 2 - 0.5, -0.5, boardSize / 2 - 0.5]}
+          />
+        </GameCanvas>
+      </div>
       {!alive && (
         <Modal titleText="You lost">
           <div className="flex justify-center">

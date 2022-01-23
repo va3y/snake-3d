@@ -13,20 +13,13 @@ interface ThirdPersonCameraProps {
 const ThirdPersonCamera: React.FC<ThirdPersonCameraProps> = ({ firstSnakeBlockRef, direction }) => {
   const ref = useRef<PerspectiveCameraImpl>();
   useThree(({ camera }) => {
-    // rotate the cam, so up is up
-    camera.position.y = 20;
-    // camera.position.z = 0;
-    // camera.position.x = 0;
+    camera.position.y = 10;
   });
 
   useFrame(({ camera }) => {
     if (!firstSnakeBlockRef?.current || !direction.current) return;
     const offset = 15;
-    const speed = 0.005;
-
-    firstSnakeBlockRef.current.updateMatrixWorld();
-    camera.updateMatrixWorld();
-
+    const speed = 0.3;
     const { x: currX, z: currZ } = camera.position;
     const { x: headX, z: headZ, y: headY } = firstSnakeBlockRef.current.position;
 
@@ -55,7 +48,8 @@ const ThirdPersonCamera: React.FC<ThirdPersonCameraProps> = ({ firstSnakeBlockRe
     camera.rotation.y = THREE.MathUtils.lerp(headY, y, speed);
     camera.rotation.z = THREE.MathUtils.lerp(headZ, z, speed);
 
-    // camera.lookAt(firstSnakeBlockRef.current.position);
+    camera.lookAt(firstSnakeBlockRef.current.position);
+
     camera.updateMatrix();
     camera.updateMatrixWorld();
     camera.updateProjectionMatrix();
