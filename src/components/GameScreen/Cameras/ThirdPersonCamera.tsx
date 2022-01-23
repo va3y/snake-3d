@@ -1,4 +1,4 @@
-import { CameraShake, PerspectiveCamera } from "@react-three/drei";
+import { PerspectiveCamera } from "@react-three/drei";
 import { useFrame, useThree } from "@react-three/fiber";
 import { MutableRefObject, useRef } from "react";
 import { Mesh, PerspectiveCamera as PerspectiveCameraImpl } from "three";
@@ -50,7 +50,7 @@ const ThirdPersonCamera: React.FC<ThirdPersonCameraProps> = ({ firstSnakeBlockRe
     camera.position.z = THREE.MathUtils.lerp(currZ, targetZ, speed);
     camera.position.x = THREE.MathUtils.lerp(currX, targetX, speed);
 
-    const { x, y, z } = camera.rotation;
+    const { y, z } = camera.rotation;
     camera.rotation.x = 1;
     camera.rotation.y = THREE.MathUtils.lerp(headY, y, speed);
     camera.rotation.z = THREE.MathUtils.lerp(headZ, z, speed);

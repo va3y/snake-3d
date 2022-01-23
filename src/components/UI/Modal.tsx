@@ -1,6 +1,5 @@
 import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useRef } from "react";
-import Button from "./Button";
 
 interface ModalProps {
   titleText: string;

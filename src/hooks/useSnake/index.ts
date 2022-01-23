@@ -1,13 +1,11 @@
 import randomIntInRange from "helpers/randomIntInRange";
 import useInterval from "../useInterval";
-import { useReducer, useRef, useCallback, useMemo } from "react";
+import { useReducer, useRef, useCallback } from "react";
 import { addToSnakeMap, isEqualCoordinates, isOppositeDirections, removeFromSnakeMap } from "./utils";
-import { Coordinate, Direction, GameState, Level, SnakeMap } from "./types";
+import { Coordinate, Direction, GameState, Level } from "./types";
 import defaultGameState from "./defaultGameState";
 import { DEFAULT_SNAKE_SPEED } from "helpers/constants";
 import cloneDeep from "lodash.clonedeep";
-import { level2 } from "./levels";
-import { NumberKeyframeTrack } from "three";
 
 const offsets = {
   up: [0, 1],

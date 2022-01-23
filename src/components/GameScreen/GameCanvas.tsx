@@ -1,6 +1,4 @@
-import { OrbitControls, PerspectiveCamera } from "@react-three/drei";
-import { Canvas, useThree } from "@react-three/fiber";
-import * as THREE from "three";
+import { Canvas } from "@react-three/fiber";
 
 const GameCanvas: React.FC = ({ children }) => {
   return (

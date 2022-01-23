@@ -12,7 +12,7 @@ import { Mesh } from "three";
 import BirdEyeCamera from "components/GameScreen/Cameras/BirdEyeCamera";
 import ThirdPersonCamera from "components/GameScreen/Cameras/ThirdPersonCamera";
 import Button from "components/UI/Button";
-import { level1, levelNames } from "hooks/useSnake/levels";
+import { levelNames } from "hooks/useSnake/levels";
 import { useLocalStorage } from "react-use";
 import { defaultRecordsState, lskeys } from "helpers/ls";
 
