@@ -44,7 +44,7 @@ const StartScreen: React.FC = () => {
         className="flex flex-col items-center"
       >
         <div className="py-8">Menu</div>
-        <InputRange className="mb-16" id="boardSize" label="Board size: " min="10" max="30" step="5">
+        <InputRange className="mb-16 max-w-xs" id="boardSize" label="Board size: " min="10" max="30" step="5">
           <InputRange.Item>10</InputRange.Item>
           <InputRange.Item>15</InputRange.Item>
           <InputRange.Item>20</InputRange.Item>
