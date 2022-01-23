@@ -36,6 +36,7 @@ export default function useSnake(boardSize: number, level: Level) {
   }, speedRef.current);
 
   const gameTick = (gameState: GameState): GameState => {
+    if (!gameState.alive) return gameState;
     const [[oldHeadX, oldHeadY]] = gameState.snake;
     const [offsetX, offsetY] = offsets[direction.current];
     const newHead = [oldHeadX + offsetX, oldHeadY + offsetY] as Coordinate;
