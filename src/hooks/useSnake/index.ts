@@ -50,6 +50,7 @@ export default function useSnake(boardSize: number, level: Level) {
 
     if (!isValidBlock(newHead)) {
       gameState.alive = false;
+      speedRef.current = DEFAULT_SNAKE_SPEED;
       return gameState;
     }
     gameState.snake = [newHead, ...gameState.snake];
@@ -57,7 +58,7 @@ export default function useSnake(boardSize: number, level: Level) {
 
     if (gameState.food && isEqualCoordinates(gameState.food, newHead)) {
       gameState.score++;
-      speedRef.current = Math.max(speedRef.current * 0.8, 100);
+      speedRef.current = Math.max(speedRef.current * 0.9, 100);
       gameState.food = null;
       return gameState;
     }

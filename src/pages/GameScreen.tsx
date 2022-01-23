@@ -55,22 +55,20 @@ const StartScreen: React.FC = () => {
       </div>
       <div {...swipeHandlers} className="h-screen w-screen">
         <GameCanvas>
-          <BirdEyeCamera boardSize={boardSize}>
-            <Level obstacleBlocks={level.obstacleBlocks} boardSize={boardSize} />
-            {snake.map(([x, y], i) => {
-              if (i === 0) return <SnakeBlock ref={firstSnakeBlockRef} key={`${x}${y}`} position={[x, 0, y]} />;
-              return <SnakeBlock key={`${x}${y}`} position={[x, 0, y]} />;
-            })}
-            {food && <FoodBlock position={[food[0], 0, food[1]]} />}
-            {/* {cameraMode === CameraMode.BirdEye && <BirdEyeCamera boardSize={boardSize} />} */}
-            {cameraMode === CameraMode.ThirdPerson && (
-              <ThirdPersonCamera firstSnakeBlockRef={firstSnakeBlockRef} direction={direction} />
-            )}
-            <gridHelper
-              args={[boardSize + 2, boardSize + 2]}
-              position={[boardSize / 2 - 0.5, -0.5, boardSize / 2 - 0.5]}
-            />
-          </BirdEyeCamera>
+          <Level obstacleBlocks={level.obstacleBlocks} boardSize={boardSize} />
+          {snake.map(([x, y], i) => {
+            if (i === 0) return <SnakeBlock ref={firstSnakeBlockRef} key={`${x}${y}`} position={[x, 0, y]} />;
+            return <SnakeBlock key={`${x}${y}`} position={[x, 0, y]} />;
+          })}
+          {food && <FoodBlock position={[food[0], 0, food[1]]} />}
+          {cameraMode === CameraMode.BirdEye && <BirdEyeCamera boardSize={boardSize} />}
+          {cameraMode === CameraMode.ThirdPerson && (
+            <ThirdPersonCamera firstSnakeBlockRef={firstSnakeBlockRef} direction={direction} />
+          )}
+          <gridHelper
+            args={[boardSize + 2, boardSize + 2]}
+            position={[boardSize / 2 - 0.5, -0.5, boardSize / 2 - 0.5]}
+          />
         </GameCanvas>
       </div>
       {!alive && (
